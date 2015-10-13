@@ -13,7 +13,7 @@ Podręczne linki:
 ## Zadania
 
 1. [ ] Learn X in Y minutes, where X = [Ruby Array/Enumerable](/)
-  - [ ] [Hash](ruby.md)
+  - [ ] [Hash](ruby.md#hashe)
   - [ ] [Array](ruby.md)
   - [ ] [Enumerable](ruby.md)
 2. [ ] Coś do przetestowania na początek
