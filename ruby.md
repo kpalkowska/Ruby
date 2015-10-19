@@ -44,17 +44,22 @@
         arr.last
         => 5
         
-        arr.take(3)
+        arr.take(3) - trzy od początku
         => [1, 2, 3]
         
-        arr.drop(3)
+        arr.drop(3) - trzy od końca
         => [3, 4, 5]
  
  - unię dwóch tablic uzyskujemy tak: 
+ 
         tab1 | tab2
+
  - część wspólną dwóch tablic:
+ 
         tab1 & tab2
+
  - różnicę dwóch tablic:
+ 
         tab1 - tab2
 
  - aby uzyskać informacje o tablicy możemy użyć:
