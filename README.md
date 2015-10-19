@@ -13,8 +13,8 @@ Podręczne linki:
 ## Zadania
 
 1. [ ] Learn X in Y minutes, where X = [Ruby Array/Enumerable](/)
-  - [ ] [Array](ruby.md#tablice)
-  - [ ] [Hash](ruby.md#hashe)
+  - [x] [Array](ruby.md#tablice)
+  - [x] [Hash](ruby.md#hashe)
   - [ ] [Enumerable](ruby.md#enumerable)
 2. [ ] Coś do przetestowania na początek
 3. [ ] Program/Biblioteka/Aplikacja WWW
