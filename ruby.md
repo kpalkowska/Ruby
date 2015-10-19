@@ -141,6 +141,7 @@
  - wybieranie elementów:
  
    - bez zapisu
+   
            arr = [1, 2, 3, 4, 5, 6]
            arr.select { |a| a > 3 }
            => [4, 5, 6]
@@ -154,6 +155,7 @@
            => [1, 2, 3, 4, 5, 6]
 
    - z zapisem
+   
           arr.delete_if { |a| a < 4 }
           => [4, 5, 6]
           arr
