@@ -2,26 +2,199 @@
 
 ### Tablice
  - tworzy się je przez podanie kilku elementów wewnątrz nawiasów kwadratowych
+ 
+        arr = [1, "lis", 7.0]
+        Array.new
+        => []
+
+        Array.new(3, lis)
+        => [lis, lis, lis]
+        
+        Array.new(3) = { Array.new(2, lis) }
+        => [[lis, lis], [lis, lis], [lis, lis]]
+
  - mogą przyjmować obiekty różniące się typami
  - mogą być łączone (join) i dzielone (split)
  
-        irb(main):010:0> tekst = tab.join(":")
+        tekst = arr.join(":")
         => "1:2:3"
-        irb(main):011:0> tekst.split(":")
+
+        tekst.split(":")
         => ["1", "2", "3"]
 
  - odniesienie się do części tablicy może odbyć się dzięki indeksom
  
-        irb(main):006:0> tab[0..1]
+        arr = [1, 2, 3, 4, 5]
+        arr[0..1]
         => [1, 2]
-        irb(main):007:0> tab[-2]
-        => 2 
+
+        arr[-2]
+        => 4 
         (wartości ujemne oznaczają położenie w tablicy od końca)
+        
+        arr[2, -2]
+        => [3, 4]
+        
+        arr.at(0)
+        => 1
+        
+        arr.first
+        => 1
+        
+        arr.last
+        => 5
+        
+        arr.take(3)
+        => [1, 2, 3]
+        
+        arr.drop(3)
+        => [3, 4, 5]
+ 
+ - unię dwóch tablic uzyskujemy tak: 
+        tab1 | tab2
+ - część wspólną dwóch tablic:
+        tab1 & tab2
+ - różnicę dwóch tablic:
+        tab1 - tab2
 
- - unię dwóch tablic uzyskujemy tak: tab1 | tab2
- - część wspólną dwóch tablic: tab1 & tab2
- - różnicę dwóch tablic: tab1 - tab2
+ - aby uzyskać informacje o tablicy możemy użyć:
+ 
+        browsers = ['Chrome', 'Firefox', 'Safari', 'Opera', 'IE']
+        browsers.length
+        => 5
 
+        browsers.count
+        => 5
+        
+        browsers.empty?
+        => false
+        
+        browsers.include?('Klaudia')
+        => false
+
+ - aby dodać elementy możemy użyć poniższych poleceń
+ 
+        arr = [1, 2, 3, 4]
+        arr.push(5)
+        => [1, 2, 3, 4, 5]
+
+        arr << 6
+        => [1, 2, 3, 4, 5, 6]
+        
+        arr.unshift(0)
+        => [0, 1, 2, 3, 4, 5, 6]
+        
+        arr.insert(2, 2.45, 2.56, 2.98)
+        => [1, 2, 2.45, 2.56, 2.98, 3, 4, 5, 6]
+
+ - aby usunąć wybrane elementy można użyć następujących poleceń
+ 
+        arr = [1, 2, 3, 4, 5]
+        arr.pop(5)
+        => [1, 2, 3, 4]
+
+        arr.shift(1)
+        => [2, 3, 4]
+        
+        arr.delete_at(1)
+        => [2, 4]
+        
+        arr = [1, 2, 2, 3]
+        arr.delete(2)
+        => [1, 3]
+        
+        arr = ['foo', 0, nil, 'bar', 7, 'baz', nil]
+        arr.compact - pomijanie 'nil' bez zapisu
+        => ['foo', 0, 'bar', 7, 'baz']
+        
+        arr.compact! - pomijanie 'nil' z zapisem
+        => ['foo', 0, 'bar', 7, 'baz']
+        arr
+        => ['foo', 0, 'bar', 7, 'baz']
+        
+        arr = [1, 2, 2, 4, 5, 7, 7, 6, 7, 9]
+        arr.uniq - pomijanie powtórzeń bez zapisu (arr.unique! - z zapisem)
+        => [1, 2, 4, 5, 7, 6, 9]
+
+ - iteracja po tablicy
+ 
+        arr = [1, 2, 3, 4, 5]
+        arr.each { |liczba| print liczba -= 2, " " } - bez zapisu
+        => [-1, 0, 1, 2, 3]
+
+        slowa = %w[idzie lisek koło drogi]
+        str = ""
+        words.reverse_each { |slowa| str += "#{slowa} " }
+        p str
+        => "drogi koło idzie lisek "
+        
+        arr.map { |a| 4*a }
+        => [4, 8, 12, 16, 20]
+        arr
+        => [1, 2, 3, 4, 5]
+
+ - wybieranie elementów:
+ 
+   - bez zapisu
+           arr = [1, 2, 3, 4, 5, 6]
+           arr.select { |a| a > 3 }
+           => [4, 5, 6]
+   
+           arr.reject { |a| a < 3 }
+           => [3, 4, 5, 6]
+           
+           arr.drop_while { |a| a < 4 }
+           => [4, 5, 6]
+           arr
+           => [1, 2, 3, 4, 5, 6]
+
+   - z zapisem
+          arr.delete_if { |a| a < 4 }
+          => [4, 5, 6]
+          arr
+          => [4, 5, 6]
+  
+          arr = [1, 2, 3, 4, 5, 6]
+          arr.keep_if { |a| a < 4 }
+          => [1, 2, 3]
+          arr
+          => [1, 2, 3]
+
+- inne ciekawe opcje:
+
+         arr = [1, 2, 3, 4]
+         arr.combination(2).to_a
+         => [[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]]
+         
+         arr = ["a", "b", "c"]
+         arr.cycle(2) { |x| puts x }
+         => a, b, c, a, b, c
+         
+         [1,2].product([3,4],[5,6]) - kombinacje
+         => [[1,3,5],[1,3,6],[1,4,5],[1,4,6],[2,3,5],[2,3,6],[2,4,5],[2,4,6]]
+         
+         arr = [ "a", "b", "b", "b", "c" ]
+         arr.index("b") - indeks pierwszego wystpienia "b"
+         => 1
+         
+         arr.rindex("b") - indeks ostatniego wystpienia "b"
+         => 3
+         
+         arr = [1, 2, 3, 4, 5]
+         arr.rotate(2) - rotacja wzgldem elementu o indeksie 2
+         => [3, 4, 5, 1, 2]
+         arr.rotate(-2)
+         => [4, 5, 1, 2, 3]
+         
+         arr.sample(2) - losowe 2 elementy
+         => [2,5]
+         
+         arr = [ 1, 2, 3 ]
+         => [1, 2, 3]
+         arr.shuffle! - losowe mieszanie elementów
+         => [2, 3, 1]
+         arr
+         => [2, 3, 1]
 
 ### Hash'e
  - inaczej tablice asocjacyjne lub słowniki
