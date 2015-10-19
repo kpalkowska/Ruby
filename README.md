@@ -8,6 +8,10 @@ Podręczne linki:
   - [rspec-core](https://github.com/rspec/rspec-core)
   - [rspec-expectations](https://github.com/rspec/rspec-expectations)
   - [rspec-mocks](https://github.com/rspec/rspec-mocks)
+1. Ruby:
+  - [Hash](http://ruby-doc.org/core-2.2.3/Hash.html)
+  - [Array](http://ruby-doc.org/core-2.2.3/Array.html)
+  - [Enumerable](http://ruby-doc.org/core-2.2.3/Enumerable.html)
 
 
 ## Zadania
