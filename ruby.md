@@ -205,21 +205,91 @@
  - inaczej tablice asocjacyjne lub słowniki
  - mają elementy, które są dostępne przez klucze mogące mieć wartość dowolnego rodzaju
  
-        irb(main):014:0> h = {1 => 2, "2" => "4"}
+        h = {1 => 2, "2" => "4"}
         => {1=>2, "2"=>"4"}
-        irb(main):015:0> h[1]
+
+        h[1]
         => 2
-        irb(main):016:0> h["2"]
+        
+        h["2"]
         => "4"
-        irb(main):017:0> h[5]
+        
+        h[5]
         => nil
+ 
+ - wartość domyślna
+ 
+        h = Hash.new("Lisek chytrusek")
+        h["a"] = 100
+        h["b"] = 200
+        
+        h["a"]
+        => 100
+        h["c"]
+        => "Lisek chytrusek"
+
+        h["c"].upcase!
+        => "LISEK CHYTRUSEK"
+        
+        h["d"]
+        => "LISEK CHYTRUSEK"
+        
+        h.keys
+        => ["a", "b"]
 
  - kasowanie elementów słownika
  
-        irb(main):020:0> h.delete 1
+        h.delete 1
         => 2
-        irb(main):021:0> h[1]
+        h[1]
         => nil
+
+ - wyświetlanie każdego elementu
+ 
+        h = { "a" => 100, "b" => 200 }
+        h.each {|key, value| puts "#{key} is #{value}" }
+        
+        a is 100
+        b is 200
+       
+        h = { "a" => 100, "b" => 200 }
+        h.each_key {|key| puts key }
+        
+        a
+        b
+        
+        h = { "a" => 100, "b" => 200 }
+        h.each_value {|value| puts value }
+        
+        100
+        200
+
+ - łączenie słowników
+ 
+        h1 = { "a" => 100, "b" => 200 }
+        h2 = { "b" => 254, "c" => 300 }
+        h1.merge(h2)
+        => {"a"=>100, "b"=>254, "c"=>300}
+
+        h1.merge(h2){|key, oldval, newval| newval - oldval}
+        => {"a"=>100, "b"=>54,  "c"=>300}
+        h1
+        => {"a"=>100, "b"=>200}
+
+ - dodawanie nowego klucza
+ 
+        h = { "a" => 100, "b" => 200 }
+        h["a"] = 9
+        h["c"] = 4
+
+        h
+        => {"a"=>9, "b"=>200, "c"=>4}
+        
+        h.store("d", 42)
+        => 42
+        h
+        => {"a"=>9, "b"=>200, "c"=>4, "d"=>42}
+
 
 ### Enumerable
  - realizuje kilka metod, które wykorzystują metodę each do iterowania po elementach
