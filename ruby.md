@@ -294,22 +294,62 @@
 
 
 ### Enumerable
- - realizuje kilka metod, które wykorzystują metodę each do iterowania po elementach
- - metody: 
-  - exclude?(object) - zwraca true, gdy pakiet nie zawiera danego obiektu
-  - index_by() - konwertuje na tablicę asocjacyjną
-  - many?() - zwraca true, gdy moduł zawiera więcej niż jeden element, może być również używana jako sprawdzenie czy którykolwiek element spełnia dane wymagania
-  
-          enum.to_a.size > 1
-  
-          people.many? { |p| p.age > 18 }
-          (zwróci true, jeśli jest dany człowiek w wieku powyżej 18 lat)
+ - realizuje wiele metod, które wykorzystują metodę each do iterowania po elementach
+ - index_by() - konwertuje na tablicę asocjacyjną
+ - łączenie elementów w kawałki
+ 
+        [3,1,4,1,5,9,2,6,5,3,5].chunk { |n| n.even? }.each { |even, ary| p [even, ary] }
+        =>
+        [false, [3, 1]]
+        [true, [4]]
+        [false, [1, 5, 9]]
+        [true, [2, 6]]
+        [false, [5, 3, 5]]
 
-  - sum(identity = 0, &block) - liczy sumę elementów, może być również bez użycia bloków
-  
-          payments.sum { |p| p.price * p.tax_rate }
-          payments.sum(&:price)
-  
-          [5, 15, 10].sum # => 30
-          ['foo', 'bar'].sum # => "foobar"
-          [[1, 2], [3, 1, 5]].sum => [1, 2, 3, 1, 5]
+ - szukanie pierwszego elementu spełniającego zadane warunki
+ 
+        (1..10).detect { |i| i % 2 == 0 and i % 3 == 1 }
+        => 10
+
+ - pętla
+ 
+        (1..5).cycle(2) { |a| print a.to_s+', ' }
+        => 1, 2, 3, 4, 5, 1, 2, 3, 4, 5,
+
+ - each_cons(n) - iteruje dany blok i zwraca n-elementowe
+ 
+        (1..5).each_cons(3) { |a| p a }
+        =>
+        [1, 2, 3]
+        [2, 3, 4]
+        [3, 4, 5]
+
+ - each_slice(n) - dzieli blok na n-elementowe tablice
+ 
+        [1, 5, 8, 2, 1, 3, 8].each_slice(2) { |a| p a }
+        =>
+        [1, 5]
+        [8, 2]
+        [1, 3]
+        [8]
+
+ - grupowanie
+ 
+        (1..20).group_by { |i| i%5 }
+        => {0=>[5, 10, 15, 20], 1=>[1, 6, 11, 16], 2=>[2, 7, 12, 17], 3=>[3, 8, 13, 18], 4=>[4, 9, 14, 19]}
+
+ - slice_after(n) - dzielenie po wystąpieniu n
+ 
+        [1, 4, 7, 3, 4, 6].slice_after(4).to_a
+        => [[1, 4], [7, 3, 4], [6]]
+
+ - slice_when {|elt_before, elt_after| bool }
+ 
+        a = [3, 11, 14, 25, 28, 29, 29, 41, 55, 57]
+        p a.slice_when {|i, j| j%i > 3 }.to_a
+        => [[3, 11], [14, 25, 28, 29, 29, [41, [55, 57]]
+
+ - sort_by
+ 
+        %w{lisek, kot, sowa}.sort_by { |word| word.length}
+        => ["kot", "sowa", "lisek"]
