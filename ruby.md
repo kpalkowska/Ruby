@@ -299,7 +299,7 @@
  - łączenie elementów w kawałki
  
         [3,1,4,1,5,9,2,6,5,3,5].chunk { |n| n.even? }.each { |even, ary| p [even, ary] }
-        =>
+        
         [false, [3, 1]]
         [true, [4]]
         [false, [1, 5, 9]]
@@ -309,17 +309,17 @@
  - szukanie pierwszego elementu spełniającego zadane warunki
  
         (1..10).detect { |i| i % 2 == 0 and i % 3 == 1 }
-        => 10
+        => 4
 
  - pętla
  
         (1..5).cycle(2) { |a| print a.to_s+', ' }
-        => 1, 2, 3, 4, 5, 1, 2, 3, 4, 5,
+        1, 2, 3, 4, 5, 1, 2, 3, 4, 5,
 
  - each_cons(n) - iteruje dany blok i zwraca n-elementowe
  
         (1..5).each_cons(3) { |a| p a }
-        =>
+        
         [1, 2, 3]
         [2, 3, 4]
         [3, 4, 5]
@@ -327,7 +327,7 @@
  - each_slice(n) - dzieli blok na n-elementowe tablice
  
         [1, 5, 8, 2, 1, 3, 8].each_slice(2) { |a| p a }
-        =>
+        
         [1, 5]
         [8, 2]
         [1, 3]
@@ -336,7 +336,7 @@
  - grupowanie
  
         (1..20).group_by { |i| i%5 }
-        => {0=>[5, 10, 15, 20], 1=>[1, 6, 11, 16], 2=>[2, 7, 12, 17], 3=>[3, 8, 13, 18], 4=>[4, 9, 14, 19]}
+        => {1=>[1, 6, 11, 16], 2=>[2, 7, 12, 17], 3=>[3, 8, 13, 18], 4=>[4, 9, 14, 19], 0=>[5, 10, 15, 20]}
 
  - slice_after(n) - dzielenie po wystąpieniu n
  
@@ -347,7 +347,7 @@
  
         a = [3, 11, 14, 25, 28, 29, 29, 41, 55, 57]
         p a.slice_when {|i, j| j%i > 3 }.to_a
-        => [[3, 11], [14, 25, 28, 29, 29, [41, [55, 57]]
+        => [[3, 11, 14], [25, 28, 29, 29], [41], [55, 57]]
 
  - sort_by
  
