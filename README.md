@@ -19,6 +19,6 @@ Podręczne linki:
 1. [ ] Learn X in Y minutes, where X = [Ruby Array/Enumerable](/)
   - [x] [Array](ruby.md#tablice)
   - [x] [Hash](ruby.md#hashe)
-  - [ ] [Enumerable](ruby.md#enumerable)
+  - [x] [Enumerable](ruby.md#enumerable)
 2. [ ] Coś do przetestowania na początek
 3. [ ] Program/Biblioteka/Aplikacja WWW
