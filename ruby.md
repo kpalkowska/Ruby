@@ -7,15 +7,16 @@
         Array.new
         => []
 
-        Array.new(3, lis)
-        => [lis, lis, lis]
+        Array.new(3, 'lis')
+        => ["lis", "lis", "lis"]
         
-        Array.new(3) = { Array.new(2, lis) }
-        => [[lis, lis], [lis, lis], [lis, lis]]
+        Array.new(3) = { Array.new(2, 'lis') }
+        => [["lis", "lis"], ["lis", "lis"], ["lis", "lis"]]
 
  - mogą przyjmować obiekty różniące się typami
  - mogą być łączone (join) i dzielone (split)
  
+        arr = [1, 2, 3]
         tekst = arr.join(":")
         => "1:2:3"
 
@@ -124,12 +125,12 @@
  - iteracja po tablicy
  
         arr = [1, 2, 3, 4, 5]
-        arr.each { |liczba| print liczba -= 2, " " } - bez zapisu
+        arr.each { |liczba| print liczba -= 2, " " }
         => [-1, 0, 1, 2, 3]
 
         slowa = %w[idzie lisek koło drogi]
         str = ""
-        words.reverse_each { |slowa| str += "#{slowa} " }
+        slowa.reverse_each { |slowa| str += "#{slowa} " }
         p str
         => "drogi koło idzie lisek "
         
@@ -177,28 +178,28 @@
          arr.cycle(2) { |x| puts x }
          => a, b, c, a, b, c
          
-         [1,2].product([3,4],[5,6]) - kombinacje
+         [1,2].product([3,4],[5,6])
          => [[1,3,5],[1,3,6],[1,4,5],[1,4,6],[2,3,5],[2,3,6],[2,4,5],[2,4,6]]
          
          arr = [ "a", "b", "b", "b", "c" ]
-         arr.index("b") - indeks pierwszego wystpienia "b"
+         arr.index("b")
          => 1
          
-         arr.rindex("b") - indeks ostatniego wystpienia "b"
+         arr.rindex("b")
          => 3
          
          arr = [1, 2, 3, 4, 5]
-         arr.rotate(2) - rotacja wzgldem elementu o indeksie 2
+         arr.rotate(2)
          => [3, 4, 5, 1, 2]
          arr.rotate(-2)
          => [4, 5, 1, 2, 3]
          
-         arr.sample(2) - losowe 2 elementy
+         arr.sample(2)
          => [2,5]
          
          arr = [ 1, 2, 3 ]
          => [1, 2, 3]
-         arr.shuffle! - losowe mieszanie elementów
+         arr.shuffle!
          => [2, 3, 1]
          arr
          => [2, 3, 1]
