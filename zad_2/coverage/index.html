@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-11-17T16:38:16+01:00">2015-11-17T16:38:16+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-11-17T17:06:24+01:00">2015-11-17T17:06:24+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         31.51
+         9.9
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>3</b> files in total.
-    <b>37</b> relevant lines. 
-    <span class="green"><b>37</b> lines covered</span> and
+    <b>1</b> files in total.
+    <b>9</b> relevant lines. 
+    <span class="green"><b>9</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -51,33 +51,13 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#5d7888bb58035147526c436385e31b868a131204" class="src_link" title="lib/matrix_multiply.rb">lib/matrix_multiply.rb</a></td>
+        <td class="strong"><a href="#b80bf1886939a8e882f8fb1ab9a75df0a3896e9b" class="src_link" title="lib/euklides.rb">lib/euklides.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>24</td>
-        <td>18</td>
-        <td>18</td>
+        <td>14</td>
+        <td>9</td>
+        <td>9</td>
         <td>0</td>
-        <td>20.9</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#34cb224fa7926a18490a0172009bbebda5700ebd" class="src_link" title="lib/silnia.rb">lib/silnia.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>7</td>
-        <td>4</td>
-        <td>4</td>
-        <td>0</td>
-        <td>193.3</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#75afb2c30b16300acb677733d6ea2d9b430bf34d" class="src_link" title="spec/silnia_spec.rb">spec/silnia_spec.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>24</td>
-        <td>15</td>
-        <td>15</td>
-        <td>0</td>
-        <td>1.1</td>
+        <td>9.9</td>
       </tr>
       
     </tbody>
@@ -96,13 +76,13 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="5d7888bb58035147526c436385e31b868a131204">
+        <div class="source_table" id="b80bf1886939a8e882f8fb1ab9a75df0a3896e9b">
   <div class="header">
-    <h3>lib/matrix_multiply.rb</h3>
+    <h3>lib/euklides.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>18</b> relevant lines. 
-      <span class="green"><b>18</b> lines covered</span> and
+      <b>9</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -113,364 +93,82 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">def multi(wiersze1,kolumny1,wiersze2,kolumny2,macierz1,macierz2)</code>
+          <code class="ruby">def euklides(a,b,p=0)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="2">
-          <span class="hits">13</span>
-          
-          <code class="ruby">	macierzwynikowa = Array.new(wiersze1) { Array.new(kolumny2, 0) }</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="3">
+        <li class="covered" data-hits="4" data-linenumber="2">
           <span class="hits">4</span>
           
-          <code class="ruby">	for i in 0..wiersze1-1</code>
-        </li>
-      
-        <li class="covered" data-hits="9" data-linenumber="4">
-          <span class="hits">9</span>
-          
-          <code class="ruby">		for j in 0..kolumny2-1</code>
-        </li>
-      
-        <li class="covered" data-hits="23" data-linenumber="5">
-          <span class="hits">23</span>
-          
-          <code class="ruby">			macierzwynikowa[i][j]=0</code>
-        </li>
-      
-        <li class="covered" data-hits="23" data-linenumber="6">
-          <span class="hits">23</span>
-          
-          <code class="ruby">			for k in 0..wiersze2-1</code>
-        </li>
-      
-        <li class="covered" data-hits="93" data-linenumber="7">
-          <span class="hits">93</span>
-          
-          <code class="ruby">				macierzwynikowa[i][j]+=macierz1[i][k]*macierz2[k][j]</code>
-        </li>
-      
-        <li class="covered" data-hits="93" data-linenumber="8">
-          <span class="hits">93</span>
-          
-          <code class="ruby">				k+=1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby">			end</code>
-        </li>
-      
-        <li class="covered" data-hits="23" data-linenumber="10">
-          <span class="hits">23</span>
-          
-          <code class="ruby">			j+=1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
-          
-          
-          <code class="ruby">		end</code>
-        </li>
-      
-        <li class="covered" data-hits="9" data-linenumber="12">
-          <span class="hits">9</span>
-          
-          <code class="ruby">		i+=1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">	end</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="14">
-          <span class="hits">4</span>
-          
-          <code class="ruby">	puts &quot;\n\n Macierz wynikowa\n&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="15">
-          <span class="hits">4</span>
-          
-          <code class="ruby">	for i in 0..wiersze1-1</code>
-        </li>
-      
-        <li class="covered" data-hits="9" data-linenumber="16">
-          <span class="hits">9</span>
-          
-          <code class="ruby">		for j in 0..kolumny2-1</code>
-        </li>
-      
-        <li class="covered" data-hits="23" data-linenumber="17">
-          <span class="hits">23</span>
-          
-          <code class="ruby">			print &quot;#{macierzwynikowa[i][j]} &quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="23" data-linenumber="18">
-          <span class="hits">23</span>
-          
-          <code class="ruby">			j+=1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
-          
-          
-          <code class="ruby">		end</code>
-        </li>
-      
-        <li class="covered" data-hits="9" data-linenumber="20">
-          <span class="hits">9</span>
-          
-          <code class="ruby">		print &quot;\n&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="9" data-linenumber="21">
-          <span class="hits">9</span>
-          
-          <code class="ruby">		i+=1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby">	end</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="23">
-          <span class="hits">4</span>
-          
-          <code class="ruby">	macierzwynikowa</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-    </ol>
-  </pre>
-</div>
-      
-        <div class="source_table" id="34cb224fa7926a18490a0172009bbebda5700ebd">
-  <div class="header">
-    <h3>lib/silnia.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>4</b> relevant lines. 
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
-    <ol>
-      
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-          
-          <code class="ruby">def silnia(n)</code>
-        </li>
-      
-        <li class="covered" data-hits="386" data-linenumber="2">
-          <span class="hits">386</span>
-          
-          <code class="ruby">  if n == 0</code>
-        </li>
-      
-        <li class="covered" data-hits="6" data-linenumber="3">
-          <span class="hits">6</span>
-          
-          <code class="ruby">    1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="4">
-          
-          
-          <code class="ruby">  else</code>
-        </li>
-      
-        <li class="covered" data-hits="380" data-linenumber="5">
-          <span class="hits">380</span>
-          
-          <code class="ruby">    n * silnia(n-1)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="7">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-    </ol>
-  </pre>
-</div>
-      
-        <div class="source_table" id="75afb2c30b16300acb677733d6ea2d9b430bf34d">
-  <div class="header">
-    <h3>spec/silnia_spec.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>15</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
-    <ol>
-      
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-          
-          <code class="ruby">require &#39;simplecov&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
-          
-          <code class="ruby">SimpleCov.start</code>
+          <code class="ruby">  if a == b</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="4" data-linenumber="4">
+          <span class="hits">4</span>
           
-          <code class="ruby">require_relative &#39;../lib/silnia&#39;</code>
+          <code class="ruby">  count = 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="25" data-linenumber="5">
+          <span class="hits">25</span>
           
-          
-          <code class="ruby">#require &#39;silnia&#39;</code>
+          <code class="ruby">  while (a != b)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="covered" data-hits="17" data-linenumber="6">
+          <span class="hits">17</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    count += 1</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="17" data-linenumber="7">
+          <span class="hits">17</span>
           
-          <code class="ruby">RSpec.describe &#39;silnia.rb&#39; do</code>
+          <code class="ruby">    if a &lt; b</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">describe &#39;#silnia&#39; do</code>
+          <code class="ruby">      b = b-a</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="9">
           
-          <code class="ruby">  it &#39;should be defined&#39; do</code>
+          
+          <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="10">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="16" data-linenumber="10">
+          <span class="hits">16</span>
           
-          <code class="ruby">    expect { silnia(369) }.not_to raise_error</code>
+          <code class="ruby">      a = a - b</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="4" data-linenumber="13">
+          <span class="hits">4</span>
           
-          <code class="ruby">    it &#39;should never be equal to factorial.&#39; do</code>
+          <code class="ruby">  return a</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
-          
-          <code class="ruby">       expect(silnia(1)).to eq(1)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
-          
-          <code class="ruby">       expect(silnia(5)).to eq(120)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    it &#39;should always be equal to factorial.&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(silnia(4)).not_to eq(8)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(silnia(1)).not_to eq(0)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    it &#39;should be defined&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(silnia(0)).to eq(1)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>

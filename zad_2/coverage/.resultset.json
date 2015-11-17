@@ -1,68 +1,23 @@
 {
   "RSpec": {
     "coverage": {
-      "C:/Users/admin/Documents/GitHub/Ruby/zad_2/lib/matrix_multiply.rb": [
+      "C:/Users/admin/Documents/GitHub/Ruby/zad_2/lib/euklides.rb": [
         1,
-        13,
         4,
-        9,
-        23,
-        23,
-        93,
-        93,
-        null,
-        23,
-        null,
-        9,
         null,
         4,
+        25,
+        17,
+        17,
+        1,
+        null,
+        16,
+        null,
+        null,
         4,
-        9,
-        23,
-        23,
-        null,
-        9,
-        9,
-        null,
-        4,
-        null
-      ],
-      "C:/Users/admin/Documents/GitHub/Ruby/zad_2/spec/silnia_spec.rb": [
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        2,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "C:/Users/admin/Documents/GitHub/Ruby/zad_2/lib/silnia.rb": [
-        1,
-        386,
-        6,
-        null,
-        380,
-        null,
         null
       ]
     },
-    "timestamp": 1447774696
+    "timestamp": 1447776384
   }
 }
