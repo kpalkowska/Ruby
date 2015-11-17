@@ -16,7 +16,7 @@ Podręczne linki:
 
 ## Zadania
 
-1. [ ] Learn X in Y minutes, where X = [Ruby Array/Enumerable](/)
+1. [x] Learn X in Y minutes, where X = [Ruby Array/Enumerable](/)
   - [x] [Array](ruby.md#tablice)
   - [x] [Hash](ruby.md#hashe)
   - [x] [Enumerable](ruby.md#enumerable)
