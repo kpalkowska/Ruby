@@ -11,13 +11,10 @@ def multi(rows1, columns1, rows2, columns2, matrix1, matrix2)
 		end
 		i=i+1
 	end
-	puts "\n\n Result \n"
 	for i in 0..rows1-1
 		for j in 0..columns2-1
-			print "#{result[i][j]} "
 			j=j+1
 		end
-		print "\n"
 		i=i+1
 	end
 	result
