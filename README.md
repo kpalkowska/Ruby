@@ -20,5 +20,9 @@ Podręczne linki:
   - [x] [Array](ruby.md#tablice)
   - [x] [Hash](ruby.md#hashe)
   - [x] [Enumerable](ruby.md#enumerable)
-2. [x] [Algorytmy oraz testy](zad_2)
+2. [x] Algorytmy w Ruby oraz testy sprawdzające ich działanie
+  - [x] [Algorytm Euklidesa](/lib/euklides.rb)
+  - [x] [Algorytm liczący silnię](/lib/silnia.rb)
+  - [x] [Algorytm mnożący macierze](/lib/matrix_multiply.rb)
+  - [x] [Testy do powyższych algorytmów](/spec)
 3. [ ] Program/Biblioteka/Aplikacja WWW
