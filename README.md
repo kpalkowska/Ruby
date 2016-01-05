@@ -25,4 +25,4 @@ Podręczne linki:
   - [x] [Algorytm liczący silnię](/lib/silnia.rb)
   - [x] [Algorytm mnożący macierze](/lib/matrix_multiply.rb)
   - [x] [Testy do powyższych algorytmów](/spec)
-3. [x] [Program/Biblioteka/Aplikacja WWW](/Egzamin)
+3. [x] [Egzamin - aplikacja webowa](/Egzamin)
