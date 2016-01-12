@@ -1,9 +1,24 @@
-#Aplikacja Webowa
+# Tickets - aplikacja webowa
 
 Autorzy: Klaudia Pałkowska, Aneta Stypa
 
-##Uruchomienie (Windows):
-Aby uruchomić aplikację należy przejść do folderu tickets w terminalu, a następnie wpisać polecenie "rails s". 
-Aplikacja dostępna jest w przeglądarce internetowej pod adresem: localhost:3000.
+# Uruchomienie 
+Aby uruchomić aplikację należy przejść do folderu *tickets* w terminalu, a następnie wpisać polecenie
 
-Do aplikacji dołączone są podstawowe testy jednostkowe (sprawdzające pojedyncze funkcjonalności) oraz kontrolerów. Uruchamia się je wpisując polecenie "rake test".
+```sh
+
+rails s
+
+```
+
+Aplikacja bedzie dostępna w przeglądarce internetowej pod adresem: *localhost:3000*.
+
+Do aplikacji dołączone są podstawowe testy jednostkowe (sprawdzające pojedyncze funkcjonalności) oraz kontrolerów. Uruchamia się je wpisując polecenie w terminalu 
+
+```sh
+
+rake test
+
+```
+
+Wykorzystana wersja *ruby on rails* to 4.2.5
